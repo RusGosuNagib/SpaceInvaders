@@ -1,0 +1,58 @@
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-board {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  background-color: #000;
+  border: 2px solid #fff;
+}
+
+.bullet {
+  position: absolute;
+  width: 15px;
+  height: 27px;
+  fill: #fff;
+  transform: scaleY(-1);
+}
+
+.game-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  color: white;
+}
+.game-restart-button {
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.game-overlay rect {
+  cursor: pointer;
+}
+
+.invader {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  fill: #800080;
+}
+
+.player {
+  position: absolute;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  fill: #0f0;
+  transform: scaleY(-1);
+}
+.text-link {
+  cursor: pointer;
+}

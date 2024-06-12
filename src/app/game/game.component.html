@@ -1,0 +1,20 @@
+<div class="game-container">
+    <div class="game-board" #gameBoard>
+        <svg class="player" [ngStyle]="playerStyle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 0L15 8H9L12 0zM6 8H4L8 24H10L6 8zM18 8H20L16 24H14L18 8z"/>
+        </svg>
+        <svg class="bullet" *ngFor="let bullet of bullets" [ngStyle]="bullet.style" xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24">
+            <path d="M12 0L15 8H9L12 0zM6 8H4L8 24H10L6 8zM18 8H20L16 24H14L18 8z"/>
+        </svg>
+        <svg *ngIf="gameOver" class="game-overlay" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+            <text x="50%" y="30%" text-anchor="middle" fill="white" font-size="18px" >ВЫ ПРОИГРАЛИ</text>
+            <rect x="60" y="50" width="105" height="30" fill="green" (click)="restartGame()"/>
+            <text x="70" y="70" fill="white" font-size="14px" (click)="restartGame()" class="text-link">Начать заново</text>
+        </svg>
+        <svg class="invader" *ngFor="let invader of invaders" [ngStyle]="invader.style"
+             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 0L15 8H9L12 0zM6 8H4L8 24H10L6 8zM18 8H20L16 24H14L18 8z"/>
+        </svg>
+    </div>
+</div>
